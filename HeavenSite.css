@@ -53,3 +53,8 @@ h1{
     isolation: isolate;
   }
 
+.header{
+  background-color:rgb(231, 231, 255);
+  margin-left: 150px;
+  padding: 120px;
+}
