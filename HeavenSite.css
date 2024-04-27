@@ -1,29 +1,67 @@
 body{
     background-color: white;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
-
+.h1{
+  margin-left:150px ;
+  margin-top: 10px;
+}
 
 .header{
-  background-color:rgb(255, 255, 255);
+  background-color:whitesmoke;
   margin-left: 150px;
-  padding: 120px;
+    padding: 120px;
+  height: 970px;
   text-align: center;
   color:#000080;
   position: relative;
 }
 
 .logo-text{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
-    position: absolute;
-    color:#000080;
-    top:20px;
-    left:150px;
-}
 
+    font-size: 50px;
+    position:relative;
+    color:#000080;
+    text-align: center;
+    top:-80px;
+    font-weight:bold;
+}
 .logo{
-  height: 50px;
+  position: relative;
+  top:-420px;
+  height: 500px;
   width: auto;
 }
 
+.zawartosc{
+  text-align: left;
+}
+.topic{
+  border-top: solid 1px #000080;
+  color:black;
+  position: relative;
+  top:-600px;
+  font-size: 50px;
+  margin:0cm;
+}
+
+.underTopic{
+  color:black;
+  position: relative;
+  top:-630px;
+  font-size: 30px;
+  margin:0cm;
+}
+
+.copyright{
+  background-color: #000080;
+  color:whitesmoke;
+  margin-right:0px;
+  margin-left: 150px;
+  padding: 10px;
+  text-align: center;
+  top:20px;
+}
