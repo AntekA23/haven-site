@@ -54,7 +54,9 @@ h1{
   }
 
 .header{
-  background-color:rgb(231, 231, 255);
+  background-color:rgb(107, 107, 255);
   margin-left: 150px;
   padding: 120px;
+  text-align: center;
+  color:#000080;
 }
