@@ -1,23 +1,26 @@
 body{
-    background-color: white;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+  background-color: white;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 .h1{
-  margin-left:150px ;
-  margin-top: 10px;
+margin-left:150px ;
+margin-top: 10px;
 }
 
 .header{
   background-color:whitesmoke;
   float: left;
   padding: 120px;
-  height: 970px;
+  height: calc(100vh);
+  width: calc(100% - 150px);
   text-align: center;
   color:#000080;
   position: relative;
+  margin-top: -100vh;
+  margin-left: 150px;
 }
 
 .logo-text{
@@ -26,12 +29,13 @@ body{
     position:relative;
     color:#000080;
     text-align: center;
-    top:-80px;
+    top:20px;
     font-weight:bold;
 }
 .logo{
   position: relative;
-  top:-420px;
+  top:-300px;
+  left: 570px;
   height: 500px;
   width: auto;
 }
@@ -43,7 +47,7 @@ body{
   border-top: solid 1px #000080;
   color:black;
   position: relative;
-  top:-600px;
+  top:-500px;
   font-size: 50px;
   margin:0cm;
 }
@@ -51,7 +55,7 @@ body{
 .underTopic{
   color:black;
   position: relative;
-  top:-630px;
+  top:-500px;
   font-size: 30px;
   margin:0cm;
 }
@@ -60,11 +64,14 @@ body{
   background-color: #000080;
   color:whitesmoke;
   margin-right:0px;
-  margin-left: 150px;
+  height: 100px;
+  width: 100%;
   padding: 10px;
   text-align: center;
-  top:20px;
+  top:calc(100vh - 100px);
+  position: absolute;
 }
+
 
 
 @keyframes menuAnimacja {
@@ -89,7 +96,7 @@ body{
 .menu{
     width: 50px;
     height: 100vh;
-    background-color: cornflowerblue;
+    background-color: #000080;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
@@ -99,7 +106,9 @@ body{
     width: 30px;
     height: 30px;
     margin-left: 10px;
-    
+    position: absolute;
+    margin-top: 20px;
+
 }
 
 .menu h3{
@@ -112,6 +121,8 @@ body{
     animation-fill-mode: forwards;
     animation-delay: 1s;
     margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 .menu p{
     display: none;
@@ -124,6 +135,8 @@ body{
     animation-delay: 1s;
     margin-left: 5px;
     color: whitesmoke;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .menu:hover{
@@ -134,7 +147,7 @@ body{
     
 }
 
-.menu:hover.linie{
+.menu:hover img{
     display:none;
 }
 
@@ -144,9 +157,69 @@ body{
 
 .menu:not(:hover){
     animation-name: reverseMenuAnimation;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 .menu:hover p{
     display: block;
 }
+
+.menu:hover .hidden{
+    opacity: 1; /* Show the text on hover */
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+
+
+
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
